@@ -76,7 +76,7 @@ orjson==3.9.15
 packaging @ file:///croot/packaging_1693575174725/work
 pandas==2.2.1
 pexpect==4.9.0
-Pillow==9.5.0
+Pillow==10.2.0
 pkginfo==1.10.0
 platformdirs @ file:///croot/platformdirs_1692205439124/work
 plotly==5.19.0
