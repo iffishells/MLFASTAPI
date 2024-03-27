@@ -14,18 +14,19 @@ pipe = StableDiffusionPipeline.from_pretrained(
     model_id,
     torch_dtype=torch.float16,
     use_auth_token=token,
-    low_cpu_mem_usage=False
+    low_cpu_mem_usage=True
 )
 
 pipe.to("cuda")
-prompt = "A photograph of fishing"
-image = pipe(prompt)["sample"][0]
+prompt = "a photo of an astronaut riding a horse on mars"
+# image = pipe(prompt).images[0]
 
+# image.save("astronaut_rides_horse.png")
 
 def obtain_image(
         prompt: str,
         *,
-        seed: int | None = None,
+        seed: int|None = None,
         num_inference_steps: int = 50,
         guidance_scale: float = 7.5) -> Image:
     generator = None if seed is None else torch.Generator('cuda').manual_seed(seed)
@@ -37,3 +38,5 @@ def obtain_image(
                         ).images[0]
 
     return image
+
+# image = obtain_image(prompt,num_inference_steps=5,seed=1024)

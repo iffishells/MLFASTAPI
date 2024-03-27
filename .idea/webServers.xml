@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f55ad3db-fa6b-43b0-8e15-05543ef971b4" name="MLFASTAPI">
+        <fileTransfer accessType="SFTP" host="192.168.1.37" port="22" sshConfigId="c727aa7e-4508-410c-ae5c-6dce45c14a68" sshConfig="deepchain@192.168.1.37:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
